@@ -1,0 +1,38 @@
+{
+  "menu": [
+    {
+      "url": "/dashboards-analytics",
+      "name": "Dashboards",
+      "icon": "menu-icon tf-icons mdi mdi-home-outline",
+      "slug": "dashboard",
+      "submenu": [
+        {
+          "url": "/dashboards-analytics",
+          "name": "Utama",
+          "slug": "dashboard-analytics"
+        }
+      ]
+    },
+    {
+      "name": "Tambah Data",
+      "icon": "menu-icon tf-icons mdi mdi-language-php",
+      "slug": "laravel-example",
+      "submenu": [
+        {
+          "url": "/TambahData/data-barang",
+          "name": "Tambah Data Barang",
+          "slug": "laravel-example-user-management"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Components"
+    },
+    {
+      "name": "Transaksi",
+      "icon": "menu-icon tf-icons mdi mdi-credit-card-outline",
+      "slug": "cards-basic",
+      "url": "cards/basic"
+    }
+  ]
+}
