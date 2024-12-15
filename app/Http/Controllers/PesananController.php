@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pesanan;
+use App\Models\Riwayat;
 use Illuminate\Support\Facades\Log;
 
 class PesananController extends Controller
@@ -39,4 +40,5 @@ class PesananController extends Controller
             return response()->json(['error' => 'Gagal menyimpan pesanan', 'details' => $e->getMessage()], 500);
         }
     }
+
 }

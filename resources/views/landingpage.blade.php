@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sembakoku</title>
+    <title>UD.YUDHA MANDIRI</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -123,7 +123,7 @@
               <ul class="list-group mb-3" id="cart-list">
                   <!-- Barang akan ditambahkan di sini oleh JavaScript -->
               </ul>
-              <button class="w-100 btn btn-primary btn-lg" id="checkout-button" type="button">Continue to Checkout</button>
+              <button class="w-100 btn btn-primary btn-lg" id="checkout-button" type="button">Lanjut ke Pembayaran</button>
           </div>
       </div>
   </div>
@@ -233,9 +233,9 @@
                           <div class="offcanvas-body">
                               <ul class="navbar-nav justify-content-end menu-list list-unstyled d-flex gap-md-3 mb-0">
                                   <li class="nav-item dropdown">
-                                      <a class="nav-link dropdown-toggle" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                                      <a class="nav-link dropdown-toggle" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Halaman</a>
                                       <ul class="dropdown-menu" aria-labelledby="pages">
-                                          <li><a href="/" class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">Cart </a></li>
+                                          <li><a href="/" class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">Keranjang </a></li>
                                           <li><a href="#produk" class="dropdown-item">Produk </a></li>
                                       </ul>
                                   </li>
@@ -309,8 +309,8 @@
                 <div class="row banner-content p-5">
 
                   <div class="content-wrapper col-md-7">
-                    <div class="categories sale mb-3 pb-3">20% off</div>
-                    <h3 class="banner-title">Fruits & Vegetables</h3>
+                    <div class="categories sale mb-3 pb-3">Barang Berkualitas</div>
+                    <h3 class="banner-title">Minyak Bimoli</h3>
                   </div>
 
                 </div>
@@ -320,8 +320,8 @@
                 <div class="row banner-content p-5">
 
                   <div class="content-wrapper col-md-7">
-                    <div class="categories sale mb-3 pb-3">15% off</div>
-                    <h3 class="item-title">Baked Products</h3>
+                    <div class="categories sale mb-3 pb-3">Harga Terjangkau</div>
+                    <h3 class="item-title">Saos ABC</h3>
                   </div>
 
                 </div>
@@ -334,55 +334,6 @@
         </div>
       </div>
     </section>
-
-    {{-- <section class="py-5 overflow-hidden">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-
-            <div class="section-header d-flex flex-wrap justify-content-between mb-5">
-              <h2 class="section-title">Kategori</h2>
-            </div>
-
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-
-            <div class="category-carousel swiper">
-              <div class="swiper-wrapper">
-                <a href="index.html" class="nav-link category-item swiper-slide">
-                  <img src="{{ asset('assets/images/icon-vegetables-broccoli.png') }}" alt="Category Thumbnail">
-                  <h3 class="category-title">Fruits & Veges</h3>
-                </a>
-                <a href="index.html" class="nav-link category-item swiper-slide">
-                  <img src="{{ asset('assets/images/icon-bread-baguette.png') }}" alt="Category Thumbnail">
-                  <h3 class="category-title">Breads & Sweets</h3>
-                </a>
-                <a href="index.html" class="nav-link category-item swiper-slide">
-                  <img src="{{ asset('assets/images/icon-soft-drinks-bottle.png') }}" alt="Category Thumbnail">
-                  <h3 class="category-title">Fruits & Veges</h3>
-                </a>
-                <a href="index.html" class="nav-link category-item swiper-slide">
-                  <img src="{{ asset('assets/images/icon-wine-glass-bottle.png') }}" alt="Category Thumbnail">
-                  <h3 class="category-title">Fruits & Veges</h3>
-                </a>
-                <a href="index.html" class="nav-link category-item swiper-slide">
-                  <img src="{{ asset('assets/images/icon-animal-products-drumsticks.png') }}" alt="Category Thumbnail">
-                  <h3 class="category-title">Fruits & Veges</h3>
-                </a>
-                <a href="index.html" class="nav-link category-item swiper-slide">
-                  <img src="{{ asset('assets/images/icon-bread-herb-flour.png') }}" alt="Category Thumbnail">
-                  <h3 class="category-title">Fruits & Veges</h3>
-                </a>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section> --}}
 
     <section class="py-5" id="produk">
       <div class="container-fluid">
@@ -637,10 +588,10 @@
                 <li class="list-group-item d-flex justify-content-between lh-sm">
                     <div>
                         <h6 class="my-0">${item.name}</h6>
-                        <small class="text-body-secondary">Qty: ${item.quantity}</small>
+                        <small class="text-body-secondary">Jumlah: ${item.quantity}</small>
                     </div>
                     <span class="text-body-secondary">Rp${item.totalPrice.toLocaleString()}</span>
-                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${id})">Remove</button>
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${id})">Hapus</button>
                 </li>
             `;
         });

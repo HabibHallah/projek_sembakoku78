@@ -3,8 +3,7 @@
 @section('title', 'Tables - Riwayat Barang')
 
 @section('content')
-<h4 class="py-3 mb-4"><span class="text-muted fw-light">Riwayat /</span> Riwayat Transaksi
-</h4>
+<h4 class="py-3 mb-4"><span class="text-muted fw-light">Riwayat /</span> Riwayat Transaksi</h4>
 
 <!-- Hoverable Table rows -->
 <div class="card">
@@ -19,15 +18,15 @@
               </tr>
           </thead>
           <tbody>
-              @forelse($riwayats as $riwayat)
+              @forelse($pesanans as $pesanan)
               <tr>
-                  <td>{{ $riwayat->barang->nama_barang }}</td>
-                  <td>{{ $riwayat->jumlah }}</td>
-                  <td>{{ number_format($riwayat->total, 0, ',', '.') }}</td>
+                  <td>{{ $pesanan->barang->nama_barang ?? 'Tidak Ada Data' }}</td>
+                  <td>{{ $pesanan->jumlah }}</td>
+                  <td>{{ number_format($pesanan->total, 0, ',', '.') }}</td>
               </tr>
               @empty
               <tr>
-                  <td colspan="3" class="text-center">Tidak ada data riwayat.</td>
+                  <td colspan="3" class="text-center">Tidak ada data pesanan.</td>
               </tr>
               @endforelse
           </tbody>

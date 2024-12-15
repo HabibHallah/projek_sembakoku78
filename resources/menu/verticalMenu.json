@@ -32,7 +32,7 @@
       "name": "Transaksi",
       "icon": "menu-icon tf-icons mdi mdi-credit-card-outline",
       "slug": "cards-basic",
-      "url": "cards/basic"
+      "url": "/cards/basic"
     }
   ]
 }

@@ -30,9 +30,4 @@ class Pesanan extends Model
     {
         return $this->belongsTo(User::class, 'user_id'); // foreign key 'user_id'
     }
-
-    public function riwayats()
-    {
-        return $this->hasMany(Riwayat::class);
-    }
 }
