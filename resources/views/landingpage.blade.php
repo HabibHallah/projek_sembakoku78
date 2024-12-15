@@ -184,7 +184,7 @@
                           <!-- Tombol Logout (Menggunakan button Bootstrap) -->
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-inline">
                               @csrf
-                              <button type="submit" class="btn btn-outline-danger btn-sm ms-2">
+                              <button type="submit" class="btn btn-info">
                                   <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#logout"></use></svg>
                                   Logout
                               </button>
