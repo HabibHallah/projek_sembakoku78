@@ -2,7 +2,7 @@
   "menu": [
     {
       "url": "/dashboards-analytics",
-      "name": "Dashboards",
+      "name": "Dashboard",
       "icon": "menu-icon tf-icons mdi mdi-home-outline",
       "slug": "dashboard",
       "submenu": [

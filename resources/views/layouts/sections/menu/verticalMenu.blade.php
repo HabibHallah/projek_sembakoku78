@@ -3,9 +3,7 @@
   <!-- ! Hide app brand if navbar-full -->
   <div class="app-brand demo">
     <a href="{{url('/dashboards-analytics')}}" class="app-brand-link">
-      <span class="app-brand-logo demo me-1">
-        @include('_partials.macros',["height"=>20])
-      </span>
+      <span class="app-brand-logo demo"><img src="{{ asset('assets/images/logo-1.png') }}" alt="Logo" height="40" style="background-color: #fff;"></span>
       <span class="app-brand-text demo menu-text fw-semibold ms-2">{{config('variables.templateName')}}</span>
     </a>
 
