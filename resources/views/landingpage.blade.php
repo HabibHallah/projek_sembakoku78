@@ -536,18 +536,17 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="map-container" style="position:relative; overflow:hidden; padding-bottom:50%; height:0; border:1px solid #ddd; border-radius:8px;">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.836946496281!2d-122.47825518468143!3d37.81992967975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858142f08e7db7%3A0xddd69a1e2b8c745f!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1617316789998!5m2!1sen!2sus"
-                        width="100%"
-                        height="100%"
-                        style="border:0; position:absolute; top:0; left:0; border-radius:8px;"
-                        allowfullscreen=""
-                        loading="lazy">
-                    </iframe>
-                </div>
+              <div class="map-container" style="position:relative; overflow:hidden; padding-bottom:50%; height:0; border:1px solid #ddd; border-radius:8px;">
+                  <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15956.613467694924!2d101.4918968!3d1.7697328!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d492d8c9c7d915%3A0xa68280b889eef0af!2sGX54%2BCQC%2C%20Jalan%20Putri%20Hijau%2C%20Sintong%2C%20Tanah%20Putih%2C%20Rokan%20Hilir%20Regency%2C%20Riau%2028992!5e0!3m2!1sen!2sid!4v1693060341234!5m2!1sen!2sid"
+                      width="100%"
+                      height="100%"
+                      style="border:0; position:absolute; top:0; left:0; border-radius:8px;"
+                      allowfullscreen=""
+                      loading="lazy">
+                  </iframe>
+              </div>
             </div>
-
 
         </div>
       </div>
@@ -556,10 +555,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6 copyright">
-            <p>© 2023 Foodmart. All rights reserved.</p>
-          </div>
-          <div class="col-md-6 credit-link text-start text-md-end">
-            <p>Free HTML Template by <a href="https://templatesjungle.com/">TemplatesJungle</a> Distributed by <a href="https://themewagon">ThemeWagon</a></p>
+            <p>© 2024 UD. Yudha Mandiri.</p>
           </div>
         </div>
       </div>

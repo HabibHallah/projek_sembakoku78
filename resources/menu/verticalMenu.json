@@ -14,7 +14,7 @@
       ]
     },
     {
-      "name": "Tambah Data",
+      "name": "Manajemen Data",
       "icon": "menu-icon tf-icons mdi mdi-language-php",
       "slug": "laravel-example",
       "submenu": [
