@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pesanan;
-use App\Models\Riwayat;
+use App\Models\Barang;
 use Illuminate\Support\Facades\Log;
 
 class PesananController extends Controller
@@ -24,6 +24,20 @@ class PesananController extends Controller
 
             // Menyimpan data pesanan untuk setiap item di cart
             foreach ($validated['cart_data'] as $item) {
+                // Cari barang berdasarkan ID
+                $barang = Barang::findOrFail($item['id']);
+
+                // Pastikan stok mencukupi
+                if ($barang->stok < $item['quantity']) {
+                    return response()->json([
+                        'error' => "Stok tidak mencukupi untuk barang: {$barang->nama_barang}",
+                    ], 400);
+                }
+
+                // Kurangi stok barang
+                $barang->decrement('stok', $item['quantity']);
+
+                // Simpan data pesanan
                 Pesanan::create([
                     'barang_id' => $item['id'],
                     'user_id' => $validated['user_id'],
@@ -40,5 +54,4 @@ class PesananController extends Controller
             return response()->json(['error' => 'Gagal menyimpan pesanan', 'details' => $e->getMessage()], 500);
         }
     }
-
 }

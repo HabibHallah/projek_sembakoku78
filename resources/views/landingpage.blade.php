@@ -179,12 +179,11 @@
                           <a href="{{ route('auth-login-basic') }}" class="rounded-circle bg-light p-2 mx-1">
                               <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#user"></use></svg>
                           </a>
-                          <span class="ms-2">{{ Auth::user()->name }}</span> <!-- Menampilkan nama pengguna -->
+                          <span class="ms-2 fw-bold">{{ Auth::user()->name }}</span> <!-- Menampilkan nama pengguna -->
 
-                          <!-- Tombol Logout (Menggunakan button Bootstrap) -->
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-inline">
                               @csrf
-                              <button type="submit" class="btn btn-info">
+                              <button type="submit" class="btn btn-info ">
                                   <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#logout"></use></svg>
                                   Logout
                               </button>
@@ -372,7 +371,7 @@
                                               </button>
                                           </span>
                                       </div>
-                                      <a href="/cart/add" class="nav-link add-to-cart"
+                                      <a href="/cart/add" class="add-to-cart btn btn-success"
                                         data-id="{{ $item->id }}"
                                         data-name="{{ $item->nama_barang }}"
                                         data-price="{{ $item->harga }}">
