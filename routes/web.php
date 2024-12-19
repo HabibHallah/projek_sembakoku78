@@ -16,6 +16,7 @@ use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PesananController;
 
+
 // Main Page Route
 Route::get('/dashboards-analytics', [DashboardAnalyticsController::class, 'index'])->name('dashboard-analytics');
 
@@ -45,24 +46,22 @@ Route::get('/auth/register-basic', [RegisterBasic::class, 'index'])->name('auth-
 Route::post('/auth/register-basic', [RegisterBasic::class, 'register'])->name('register-basic'); // Rute POST untuk pendaftaran
 Route::post('/logout', [LoginBasic::class, 'logout'])->name('logout');
 
-// cards
-Route::get('/cards/basic', [CardBasic::class, 'index'])->name('cards-basic');
-
 // form elements
 Route::get('/forms/basic-inputs', [BasicInput::class, 'index'])->name('forms-basic-inputs');
 Route::get('/forms/input-groups', [InputGroups::class, 'index'])->name('forms-input-groups');
 
-// form layouts
-Route::get('/form/layouts-vertical', [VerticalForm::class, 'index'])->name('form-layouts-vertical');
-Route::get('/form/layouts-horizontal', [HorizontalForm::class, 'index'])->name('form-layouts-horizontal');
 
 // tambah data
-Route::get('/TambahData/data-barang', [TambahData::class, 'index'])->name('data-barang');
-Route::get('/TambahData/barang', [BarangController::class, 'create'])->name('barang.create');
-Route::post('/TambahData/barang', [BarangController::class, 'store'])->name('barang.store');
-Route::get('/barang/{id}/edit', [BarangController::class, 'edit'])->name('barang.edit');
-Route::put('/barang/{id}', [BarangController::class, 'update'])->name('barang.update');
-Route::delete('/barang/{id}', [BarangController::class, 'destroy'])->name('barang.destroy');
+Route::middleware(['auth'])->group(function () {
+  Route::get('/TambahData/data-barang', [TambahData::class, 'index'])->name('data-barang');
+  Route::get('/TambahData/barang',  [BarangController::class, 'create'])->name('barang.create');
+  Route::post('/TambahData/barang', [BarangController::class, 'store'])->name('barang.store');
+  Route::get('/barang/{id}/edit', [BarangController::class, 'edit'])->name('barang.edit');
+  Route::put('/barang/{id}', [BarangController::class, 'update'])->name('barang.update');
+  Route::delete('/barang/{id}', [BarangController::class, 'destroy'])->name('barang.destroy');
+  //Tabel Riwayat
+  Route::get('/cards/basic', [CardBasic::class, 'index'])->name('cards-basic');
+});
 
 //landingpage
 Route::get('/', [LandingPageController::class, 'index'])->name('landing-page');
